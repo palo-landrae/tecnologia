@@ -1,0 +1,77 @@
+
+html,body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+/* Color Palette */
+.dark-blue {
+	color: #0e141b;
+}
+
+.light-blue {
+	color: #242731;
+}
+.clash-gold {
+	color: #ca9d4b;
+}
+.light-gold {
+	color: #f6c971;
+}	
+.off-white {
+	color: #eee2cc;	
+}
+
+/* Background Colors */
+.bg-dark-blue {
+	background-color: #0e141b;
+}
+.bg-clash-gold {
+	background-color:#ca9d4b;
+}
+.bg-flat-white {
+	background-color: #fefefe;	
+}
+.bg-off-black {
+	background-color: #111111;
+}
+
+@font-face {
+	font-family: 'Beaufort for LOL Regular';
+    src: url("Fonts/beaufortforlol-regular.ttf"),
+		local('BeaufortforLOL-Regular');
+}
+
+.lol-font{
+	font-family: 'Beaufort for LOL Regular';
+}
+
+@font-face {
+	font-family: 'Beaufort for LOL Italic';
+    src: url("Fonts/beaufortforlol-italic.ttf"),
+		local('BeaufortforLOL-Italic');
+}
+
+.lol-font-italic{
+	font-family: 'Beaufort for LOL Italic';
+}
+
+.lol-title{
+	font-size: 72px;
+	text-transform: uppercase;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.div-title {
+	text-align: center;
+	position: relative;
+	margin: 0 auto;
+	padding: 0;
+	width: 50%;
+}
+
+
+

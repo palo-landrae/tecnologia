@@ -1,0 +1,387 @@
+<html>
+<head>
+	<title>BTS_4.1</title>
+	<link rel="stylesheet" type="text/css" href="custom.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<style>
+		
+		/* text responsive */
+		@media only screen and (min-width: 320px){
+			p {
+				font-size: calc(12px + 10 * ((100vw - 320px) / 2240));
+			}
+			h3 {
+				font-size: calc(12px + 14 * ((100vw - 320px) / 2240));
+			}
+			h5 {
+				font-size: calc(14px + 18 * ((100vw - 320px) / 2240));
+			}
+			h6 {
+				font-size: calc(6px + 14 * ((100vw - 320px) / 2240));
+			}
+			.display-1 {
+				font-size: calc(32px + 58 * ((100vw - 320px) / 2240));
+			}
+		}
+		
+		.home-image img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+		
+		
+		.centered {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			width: 100%;
+		}
+		
+		.home-image {
+			position: relative;
+			text-align: center;
+		}
+		
+		.btn-header {
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			color: white;
+		}
+		
+		.outer-image {
+			position: relative;
+			max-width: 100%;
+			height: auto;
+		}
+		
+		.inner-image {
+			position: absolute;
+			max-width: 100%;
+			height: auto;
+			margin: 0;
+			top:35%;
+			left:50%;
+			transform: translate(-50%,-50%);
+		}
+		
+		.yone-image {
+			position: relative;
+			width: 100%;
+			height: 40rem;
+		}
+		
+		nav li {
+			margin-right: 10px;
+			margin-left: 10px;
+		}
+		
+		#campioni .card-img-top {
+			width: 17rem;
+			height: 20rem;
+			object-fit: cover;
+		}
+		
+		#campioni .card {
+			width: 17rem;
+			margin-bottom: 1rem;
+		}
+		
+		#campioni .card-text {
+			text-transform: uppercase;
+		}
+		
+		#yone .card {
+			margin-bottom: 20px;
+			width: 100%;
+			height: 90%;
+		}
+		
+		#forum a {
+			color: black;
+		}
+	}  	
+	</style>	
+</head>
+
+<body class="bg-flat-white">
+	
+	<nav class="navbar navbar-expand-md bg-off-black sticky-top">
+		
+		<a class="navbar-brand mr-auto"><img src="Immagini/lol-logo.png" class="float-left"style="max-width: 30px"/></a>
+		
+		<button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_nav">
+			<img src="Immagini/caret.png" style="max-width: 20px"/>
+		</button>
+		<div class="collapse navbar-collapse" id="collapse_nav">
+			<ul class="navbar-nav m-auto">
+				<li class="nav-item">
+					<a class="nav-link btn-header" href="#gioco">gioco</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link btn-header" href="#campioni">campioni</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link btn-header" href="#notizie">notizie</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle btn-header" data-toggle="dropdown" data-target="dropdown-toggle">
+						patch
+						<span class="caret"></span>
+					</a>
+					<div class="dropdown-menu" aria-labelledby="dropdown_target">
+						<a class="dropdown-item" href="https://euw.leagueoflegends.com/it-it/news/game-updates/patch-10-21-notes/" target="_blank">Patch 10.21</a>
+						<a class="dropdown-item" href="https://euw.leagueoflegends.com/it-it/news/game-updates/patch-10-20-notes/" target="_blank">Patch 10.20</a>
+						<a class="dropdown-item" href="https://euw.leagueoflegends.com/it-it/news/game-updates/patch-10-19-notes/" target="_blank">Patch 10.19</a>
+					</div>
+				</li>
+				<li class="nav-item dropdown mr-auto">
+					<a class="nav-link dropdown-toggle btn-header" data-toggle="dropdown" data-target="dropdown-toggle">
+						Account
+						<span class="caret"></span>
+					</a>
+					<div class="dropdown-menu" aria-labelledby="dropdown_target">
+						<a class="dropdown-item">Profile</a>
+						<a class="dropdown-item">Settings</a>
+						<a class="dropdown-item">Log out</a>
+					</div>
+				</li>
+				<li class="nav-item">
+					<button type="button" class="btn btn-primary" style="max-width: 100%; text-align: center;">
+						<span>DOWNLOAD</span>
+					</button>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	
+	<!-- Benvenuto -->
+	<section id="gioco">
+		<div class="home-image">
+			<img src="Immagini/Ornn.jpg" style="filter: brightness(50%);"/>
+			<div class="centered">
+				<div class="row">
+					<div class="col-12 off-white">
+						<h3 style="text-transform: uppercase;font-style: italic;">benvenuto nella landa</h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12 clash-gold lol-font">
+						<h1 class="display-1">League of Legends</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!-- Cards -->
+	<section id="campioni">
+		<div class="containter my-3 pt-5 text-center">
+			<div class="row mb-5">
+				<div class="col">
+					<h1 class="lol-font-italic display-1">CAMPIONI</h1>
+				</div>
+			</div>
+		</div>
+		<div class="row mx-auto">
+			<div class="col-xl-3 col-lg-4 col-md-6">
+				<div class="card text-center">
+					<img src="Immagini/akali-card.jpg" class="card-img-top"/>
+					<div class="card-body">
+						<h5 class="card-title">Akali</h5>
+						<p class="card-text">l'assassina solitaria</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-lg-4 col-md-6">
+				<div class="card text-center" style="overflow: hidden;">
+					<img src="Immagini/garen-card.jpg" class="card-img-top"/>
+					<div class="card-body">
+						<h5 class="card-title">Garen</h5>
+						<p class="card-text">la potenza di Demacia</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-lg-4 col-md-6">
+				<div class="card text-center">
+					<img src="Immagini/ryze-card.jpg" class="card-img-top"/>
+					<div class="card-body">
+						<h5 class="card-title">Ryze</h5>
+						<p class="card-text">il mago delle rune</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-lg-4 col-md-6">
+				<div class="card text-center">
+					<img src="Immagini/aphelios-card.jpg" class="card-img-top"/>
+					<div class="card-body">
+						<h5 class="card-title">Aphelios</h5>
+						<p class="card-text">l'arma della fede</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!-- Notizie -->
+	<section id="notizie">
+		<div class="containter my-3 pt-5 text-center">
+			<div class="row mb-5">
+				<div class="col">
+					<h1 class="lol-font-italic display-1">NOTIZIE</h1>
+				</div>
+			</div>
+		</div>
+		
+		<!-- YONE -->
+		<section id="yone">
+			<div class="containter my-1 pt-5 text-center">
+				<div class="row mb-5">
+					<div class="col">
+						<h1 class="lol-font-italic display-1">YONE</h1>
+						<h2 class="lol-font-italic">L'IMPERITURO</h2>
+					</div>
+				</div>
+				<!--Champion Image -->
+				<div class="row">
+					<div class="col mx-auto">
+						<div class="yone-image" style="height: auto;">
+							<img src="Immagini/circle-frame.png" class="outer-image"/>
+							<img src="Immagini/rsz_yone.png" class="inner-image"/>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+			<div class="row mx-auto">
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-4">
+					<div class="card">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-xl-2 col-lg-2 col-md-4 col-4">
+									<img src="Immagini/yone-abilities/p.png" />
+								</div>
+								<div class="col-xl-10 col-lg-10 col-md-8 col-8">
+									<h5>VIA DELLO SHINIGAMI</h5>
+									<p>Yone infligge danni magici a ogni secondo attacco. Inoltre, la sua probabilità di colpo critico è raddoppiata.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-4">
+					<div class="card">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-xl-2 col-lg-2 col-md-4 col-4">
+									<img src="Immagini/yone-abilities/q.png" />
+								</div>
+								<div class="col-xl-10 col-lg-10 col-md-8 col-8">
+									<h5>FURIA D'ACCIAIO</h5>
+									<p>Scatta in avanti, danneggiando tutti i nemici lungo una linea. 
+									Sul colpo, conferisce una carica di Tempesta incombente per qualche secondo. 
+									A 2 cariche, Furia d'acciaio fa scattare Yone in avanti con una raffica di vento che lancia i nemici in aria. 
+									Furia d'acciaio conta come un attacco base e cresce nello stesso modo.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-4">
+					<div class="card">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-xl-2 col-lg-2 col-md-4 col-4">
+									<img src="Immagini/yone-abilities/w.png" />
+								</div>
+								<div class="col-xl-10 col-lg-10 col-md-8 col-8">
+									<h5>FENDENTE REIATSU</h5>
+									<p>Colpisce in avanti, danneggiando tutti i nemici in un'area a cono. Fornisce a Yone uno scudo il cui valore aumenta in base al numero dei campioni colpiti con la spazzata. Il tempo di ricarica e di lancio di Fendente Reiatsu si riducono con la velocità d'attacco.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-4">
+					<div class="card">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-xl-2 col-lg-2 col-md-4 col-4">
+									<img src="Immagini/yone-abilities/e.png" />
+								</div>
+								<div class="col-xl-10 col-lg-10 col-md-8 col-8">
+									<h5>SCISSIONE SPIRITUALE</h5>
+									<p>Lo spirito di Yone esce dal suo corpo, guadagnando velocità di movimento. Al termine di questa abilità, lo spirito di Yone torna nel suo corpo e ripete una parte dei danni inflitti in forma di spirito.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-4">
+					<div class="card">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-xl-2 col-lg-2 col-md-4 col-4">
+									<img src="Immagini/yone-abilities/r.png" />
+								</div>
+								<div class="col-xl-10 col-lg-10 col-md-8 col-8">
+									<h5>RASHOMON</h5>
+									<p>Yone scatta alle spalle dell'ultimo nemico in una linea sferrando un fendente tanto potente da attirare tutti i nemici colpiti verso di sé.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- listgroup & badges  -->
+		<section id="forum">
+			<div class="mx-1>
+				<div class="row">
+					<div class="col">
+						<ul class="list-group">
+							<li class="list-group-item" style="background-color: #111111;">
+								<span class="off-white">League of Legends Forum</span>
+							</li>
+							<li class="list-group-item list-group-item-warning">
+								<a href="#">Worlds Championship 2020</a>
+								<span class="badge float-right">12</span>
+							</li>
+							<li class="list-group-item list-group-item-danger">
+								<a href="#">Nuovo Campione???</a>
+								<span class="badge float-right">8</span>
+							</li>
+							<li class="list-group-item list-group-item-success">
+								<a href="#">League of Legends Tier List</a>
+								<span class="badge float-right">29</span>
+							</li>
+					</div>
+				</div>
+			</div>
+		</section>
+	</section>
+	
+	<nav class="mt-3">
+		<ul class="pagination justify-content-center sticky-bottom mb-4">
+            <li class="page-item disabled">
+				<a class="page-link rounded-circle m-1" href="BTS_4.1.html"><i class="fas fa-chevron-left off-black"></i></a>
+			</li>
+            <li class="page-item active"><a class="page-link rounded-circle m-1" href="BTS_4.1.html">1</a></li>
+            <li class="page-item"><a class="page-link rounded-circle m-1" href="BTS_4.1v2.html">2</a></li>
+
+			<li class="page-item">
+				<a class="page-link rounded-circle m-1" href="BTS_4.1v2.html"><i class="fas fa-chevron-right off-black"></i></a>
+			</li>
+         </ul>
+	</nav>
+</body>
+</html>
