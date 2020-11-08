@@ -1,6 +1,7 @@
 <html>
 <head>
-	<title>BTS_4.1</title>
+	<title>League of Legends</title>
+	<link rel="shortcut icon" href="Immagini/shortcut-icon.png"/>
 	<link rel="stylesheet" type="text/css" href="custom.css">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,7 +11,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	<style>
-		
 		/* text responsive */
 		@media only screen and (min-width: 320px){
 			p {
@@ -30,10 +30,11 @@
 			}
 		}
 		
-		.home-image img {
+		.home-image video {
 			display: block;
 			width: 100%;
 			height: auto;
+			filter: brightness(50%);
 		}
 		
 		
@@ -83,19 +84,45 @@
 			margin-left: 10px;
 		}
 		
-		#campioni .card-img-top {
-			width: 17rem;
-			height: 20rem;
+		#campioni .card-img {
+			width: 100%;
+			height: 100%;
 			object-fit: cover;
+			overflow: hidden;
 		}
 		
 		#campioni .card {
-			width: 17rem;
+			width: 15rem;
+			height: 22rem;
 			margin-bottom: 1rem;
+			transition: 0.5s;
+			overflow: hidden;
 		}
 		
-		#campioni .card-text {
+		#campioni .card:hover{
+			transform: scale(1.1);
+			z-index: 2;
+		}
+		
+		#campioni .card-body {
+			letter-spacing: 2px;
 			text-transform: uppercase;
+			width: 100%;
+			height: 300px;
+			position: absolute;
+			top: 82%;
+			left: 0;
+			color: #ca9d4b;
+			background: rgba(0, 0, 0, 0.5);
+			transition: 0.5s;
+		}
+		
+		#campioni .card-text{
+			color: white;
+		}
+		
+		#campioni .card:hover .card-body{
+			top: 68%;
 		}
 		
 		#yone .card {
@@ -107,6 +134,15 @@
 		#forum a {
 			color: black;
 		}
+		
+		#notifica div {
+			height: 20%;
+			background-image: url(Immagini/yone-art.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: 0% 45%;
+		}
+	
 	}  	
 	</style>	
 </head>
@@ -126,10 +162,10 @@
 					<a class="nav-link btn-header" href="#gioco">gioco</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link btn-header" href="#campioni">campioni</a>
+					<a class="nav-link btn-header" href="#notizie">notizie</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link btn-header" href="#notizie">notizie</a>
+					<a class="nav-link btn-header" href="#campioni">campioni</a>
 				</li>
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle btn-header" data-toggle="dropdown" data-target="dropdown-toggle">
@@ -165,7 +201,10 @@
 	<!-- Benvenuto -->
 	<section id="gioco">
 		<div class="home-image">
-			<img src="Immagini/Ornn.jpg" style="filter: brightness(50%);"/>
+			<!-- <img src="Immagini/Ornn.jpg" style="filter: brightness(50%);"/>-->
+			<video autoplay muted loop id="ornn_login_screen">
+				<source src="Video/ornn.mp4" type="video/mp4">
+			</video>
 			<div class="centered">
 				<div class="row">
 					<div class="col-12 off-white">
@@ -175,55 +214,6 @@
 				<div class="row">
 					<div class="col-12 clash-gold lol-font">
 						<h1 class="display-1">League of Legends</h1>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	
-	<!-- Cards -->
-	<section id="campioni">
-		<div class="containter my-3 pt-5 text-center">
-			<div class="row mb-5">
-				<div class="col">
-					<h1 class="lol-font-italic display-1">CAMPIONI</h1>
-				</div>
-			</div>
-		</div>
-		<div class="row mx-auto">
-			<div class="col-xl-3 col-lg-4 col-md-6">
-				<div class="card text-center">
-					<img src="Immagini/akali-card.jpg" class="card-img-top"/>
-					<div class="card-body">
-						<h5 class="card-title">Akali</h5>
-						<p class="card-text">l'assassina solitaria</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-xl-3 col-lg-4 col-md-6">
-				<div class="card text-center" style="overflow: hidden;">
-					<img src="Immagini/garen-card.jpg" class="card-img-top"/>
-					<div class="card-body">
-						<h5 class="card-title">Garen</h5>
-						<p class="card-text">la potenza di Demacia</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-xl-3 col-lg-4 col-md-6">
-				<div class="card text-center">
-					<img src="Immagini/ryze-card.jpg" class="card-img-top"/>
-					<div class="card-body">
-						<h5 class="card-title">Ryze</h5>
-						<p class="card-text">il mago delle rune</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-xl-3 col-lg-4 col-md-6">
-				<div class="card text-center">
-					<img src="Immagini/aphelios-card.jpg" class="card-img-top"/>
-					<div class="card-body">
-						<h5 class="card-title">Aphelios</h5>
-						<p class="card-text">l'arma della fede</p>
 					</div>
 				</div>
 			</div>
@@ -342,34 +332,231 @@
 				</div>
 			</div>
 		</section>
-		
-		<!-- listgroup & badges  -->
-		<section id="forum">
-			<div class="mx-1>
-				<div class="row">
-					<div class="col">
-						<ul class="list-group">
-							<li class="list-group-item" style="background-color: #111111;">
-								<span class="off-white">League of Legends Forum</span>
-							</li>
-							<li class="list-group-item list-group-item-warning">
-								<a href="#">Worlds Championship 2020</a>
-								<span class="badge float-right">12</span>
-							</li>
-							<li class="list-group-item list-group-item-danger">
-								<a href="#">Nuovo Campione???</a>
-								<span class="badge float-right">8</span>
-							</li>
-							<li class="list-group-item list-group-item-success">
-								<a href="#">League of Legends Tier List</a>
-								<span class="badge float-right">29</span>
-							</li>
+	</section>
+	
+	<!-- Cards -->
+	<section id="campioni">
+		<div class="container my-3 pt-5 text-center">
+			<div class="row mb-5">
+				<div class="col">
+					<h1 class="lol-font-italic display-1">CAMPIONI</h1>
+				</div>
+			</div>
+		</div>
+		<div class="row mx-4 lol-font">
+			<div class="col-xl-3 col-lg-4 col-md-6">
+				<div class="card text-center">
+					<img src="Immagini/akali-card.jpg" class="card-img"/>
+					<div class="card-body">
+						<h4 class="card-title">Akali</h4>
+						<p class="card-text">l'assassina solitaria</p>
 					</div>
 				</div>
 			</div>
-		</section>
+			<div class="col-xl-3 col-lg-4 col-md-6">
+				<div class="card text-center">
+					<img src="Immagini/garen-card.jpg" class="card-img"/>
+					<div class="card-body">
+						<h4 class="card-title">Garen</h4>
+						<p class="card-text">la potenza di Demacia</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-lg-4 col-md-6">
+				<div class="card text-center">
+					<img src="Immagini/ryze-card.jpg" class="card-img"/>
+					<div class="card-body">
+						<h4 class="card-title">Ryze</h4>
+						<p class="card-text">il mago delle rune</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-lg-4 col-md-6">
+				<div class="card text-center">
+					<img src="Immagini/aphelios-card.jpg" class="card-img"/>
+					<div class="card-body">
+						<h4 class="card-title">Aphelios</h4>
+						<p class="card-text">l'arma della fede</p>
+					</div>
+				</div>
+			</div>
+			<!--
+			<div class="col-xl-3 col-lg-4 col-md-6">
+				<div class="card text-center">
+					<img src="Immagini/janna-card.jpg" class="card-img"/>
+					<div class="card-body">
+						<h5 class="card-title">Janna</h5>
+						<p class="card-text">la furia della tempesta</p>
+					</div>
+				</div>
+			</div>
+			-->
+		</div>
 	</section>
 	
+	<!-- tabs -->
+	<section id="modalita">
+		<div class="container my-3 pt-5 text-center">
+			<div class="row mb-5">
+				<div class="col">
+					<h1 class="lol-font-italic display-1">MODALITA' DI GIOCO</h1>
+				</div>
+			</div>
+		</div>
+		<div class="mx-3">
+			<ul class="nav nav-tabs" role="tablist" style="text-transform: uppercase;">
+				<li class="nav-item">
+					<span class="nav-link active" data-toggle="tab" role="button" href="#LE">Landa degli Evocatori</span>
+				</li>
+				<li class="nav-item">
+					<span class="nav-link" data-toggle="tab" role="button" href="#ARAM">ARAM</span>
+				</li>
+				<li class="nav-item">
+					<span class="nav-link" data-toggle="tab"  role="button" href="#URF">URF</span>
+				</li>
+			</ul>
+			<div class="tab-content">
+				<div id="LE" class="tab-pane active text-justify">
+					<div class="row">
+						<div class="col-xl-3 col-lg-4 col-md-4 col-12">
+							<img class="img-fluid" src="Immagini/landa-degli-evocatori.png"/>
+						</div>
+						<div class="col-xl-9 col-lg-8 col-md-8 col-12">
+							<p>La Landa degli evocatori è il campo di battaglia più grande tra quelli disponibili: è speculare lungo la diagonale e ha tre corsie che conducono alla base nemica.
+							Ogni corsia è difesa da tre torri e da un inibitore (comunemente chiamato Nexus), mentre il nexus è protetto da due torri.
+							Entrambi i lati della mappa hanno grandi giungle con dei buff molto potenti, mentre il fiume centrale ospita due boss che conferiscono benefici all'intera squadra.
+							</p>
+						</div>
+					</div>
+				</div>
+				
+				<div id="ARAM" class="tab-pane fade text-justify">
+					<div class="row">
+						<div class="col-xl-3 col-lg-4 col-md-4 col-12">
+							<img class="img-fluid" src="Immagini/ARAM.png"/>
+						</div>
+						<div class="col-xl-9 col-lg-8 col-md-8 col-12">
+							<p>L'unico campo di battaglia a singola corsia di League of Legends, l'Abisso ululante presenta due base agli estremi opposti di un ponte.
+							Questo ponte è difeso da due torri e un inibitore, mentre il nexus è protetto da due torri. 
+							Senza terreni neutrali che possano causare distrazioni, l'Abisso ululante è teatro di alcuni tra gli scontri più frequenti e intensi di tutte le mappe.
+							</p>
+						</div>
+					</div>
+				</div>
+				
+				<div id="URF" class="tab-pane fade text-justify">
+					<div class="row">
+						<div class="col-xl-3 col-lg-4 col-md-4 col-12">
+							<img class="img-fluid" src="Immagini/URF.jpg"/>
+						</div>
+						<div class="col-xl-9 col-lg-8 col-md-8 col-12">
+							<p>La modalità Ultra Rapid Fire o URF, in italiano Fuoco Ultra Rapido, è simile alla modalità Normale, ma con la differenza che le abilità dei Campioni e gli incantesimi dell'evocatore impiegano soltanto pochi secondi a ricaricarsi, e che nella base di ogni squadra è presente un cannone che permette al giocatore di propellersi rapidamente verso un punto della mappa senza doverlo raggiungere a piedi. 
+							Le partite in questa modalità sogliono essere più brevi di quelle in modalità Normale.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+		<!-- carousel -->
+		<section id="regioni">
+			<div class="containter my-3 pt-5 text-center">
+				<div class="row mb-5">
+					<div class="col">
+						<h1 class="lol-font-italic display-1">REGIONI</h1>
+					</div>
+				</div>
+			</div>
+			<div class="row mx-1 my-3">
+				<div class="col-12">
+					<div id="my-slider" class="carousel slide" data-ride="carousel" style="text-transform:uppercase;">
+						<ol class="carousel-indicators">
+							<li data-target="#my-slider" data-slide-to="0" class="active"></li>
+							<li data-target="#my-slider" data-slide-to="1"></li>
+							<li data-target="#my-slider" data-slide-to="2"></li>
+							<li data-target="#my-slider" data-slide-to="3"></li>
+							<li data-target="#my-slider" data-slide-to="4"></li>
+						</ol>
+						<div class="carousel-inner" role="listbox">
+							<div class="carousel-item active">
+								<img class="rounded img-fluid" src="Immagini/Region/Ionia.jpg"/>
+								<div class="carousel-caption">
+									<h1 class="lol-font">Ionia</h1>
+								</div>
+							</div>
+							
+							<div class="carousel-item">
+								<img class="rounded img-fluid" src="Immagini/Region/Noxus.jpg"/>
+								<div class="carousel-caption">
+									<h1 class="lol-font">Noxus</h1>
+								</div>
+							</div>
+							
+							<div class="carousel-item">
+								<img class="rounded img-fluid" src="Immagini/Region/Bilgewater.jpg"/>
+								<div class="carousel-caption">
+									<h1 class="lol-font">Bilgewater</h1>
+								</div>
+							</div>
+							
+							<div class="carousel-item">
+								<img class="rounded img-fluid" src="Immagini/Region/Frejlord.jpg"/>
+								<div class="carousel-caption">
+									<h1 class="lol-font">Frejlord</h1>
+								</div>
+							</div>
+							
+							<div class="carousel-item">
+								<img class="rounded img-fluid" src="Immagini/Region/Shurima.png"/>
+								<div class="carousel-caption">
+									<h1 class="lol-font">Shurima</h1>
+								</div>
+							</div>
+						</div>
+						
+						<a class="carousel-control-prev" href="#my-slider" role="button" data-slide="prev">
+							<span class="carousel-control-prev-icon"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="carousel-control-next" href="#my-slider" role="button" data-slide="next">
+							<span class="carousel-control-next-icon"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+					</div>
+				</div>
+			</div>
+	</section>
+	
+	<!-- listgroup & badges  -->
+	<section id="forum">
+		<div class="mx-3">
+			<div class="row">
+				<div class="col">
+					<ul class="list-group">
+						<li class="list-group-item" style="background-color: #111111;">
+							<span class="off-white">League of Legends Forum</span>
+						</li>
+						<li class="list-group-item">
+							<a href="#">Worlds Championship 2020</a>
+							<span class="badge float-right">12</span>
+						</li>
+						<li class="list-group-item">
+							<a href="#">Nuovo Campione???</a>
+							<span class="badge float-right">8</span>
+						</li>
+						<li class="list-group-item">
+							<a href="#">League of Legends Tier List</a>
+							<span class="badge float-right">29</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!-- pagination -->
 	<nav class="mt-3">
 		<ul class="pagination justify-content-center sticky-bottom mb-4">
             <li class="page-item disabled">
@@ -383,5 +570,16 @@
 			</li>
          </ul>
 	</nav>
+	
+	<!-- alert -->
+	<section id="notifica">
+		<div class="alert alert-success alert-dismissible fade show fixed-bottom" role="alert" style="text-align:center;">
+			<h1 class="display-1 lol-font off-white" style="text-transform: uppercase;">Nuovo campione!</h1>
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
+	</section>
+	
 </body>
 </html>
